@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.car {
+    position: relative;
+    width: 500px;
+    margin-top: 300px;
+    animation: moveCar 5s linear infinite;
+}
+
+.car-body {
+    width: 100%;
+    display: block;
+}
+
+.tyre {
+    position: absolute;
+    width: 17%;
+    bottom: 25%;
+    animation: rotateTyre 2s linear infinite;
+}
+
+.tyre img {
+    width: 100%;
+    display: block;
+}
+
+.front-tyre {
+    left: 68%;
+}
+
+.back-tyre {
+    left: 10%;
+}
+
+@keyframes moveCar {
+    0%   { transform: translateX(-50vw); }
+    100% { transform: translateX(50vw); }
+}
+
+@keyframes rotateTyre {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
